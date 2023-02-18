@@ -1,4 +1,6 @@
 
+##
+
 # Questions to be answered
 
 1. What factors influence students' performance in exams?
@@ -7,12 +9,23 @@
 
 ##
 
-
 # let's check our dataset
 
 select * 
 from stud
 
+We see that there are 1000 rows and 8 columns each categorized:
+
+gender, race/ethnicity, parental level of edu, lunch, test prep. course, math score, reading score, writing score
+
+# Let's see if our data is clean 
+
+select distinct *
+from stud
+
+There is no duplicated or null entries. 
+
+# Let's start our analysis 
 
 # number of students by gender 
 
