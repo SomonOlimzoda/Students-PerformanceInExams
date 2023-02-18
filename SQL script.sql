@@ -128,7 +128,6 @@ from stud
 group by "parental level of education", lunch, "test preparation course" 
 order by avg_math_score desc, avg_reading_score desc, avg_writing_score desc
 
-
 # avg test scores by gender
 
 select gender, 
@@ -167,8 +166,8 @@ order by avg_math_score desc, avg_reading_score desc, avg_writing_score desc
 
 select "parental level of education",
 avg("math score") as avg_math_score,
-avg("reading score") as avg_math_score,
-avg("writing score") as avg_math_score
+avg("reading score") as avg_reading_score,
+avg("writing score") as avg_writing_score
 from stud s 
 group by "parental level of education"
 order by avg_math_score desc, avg_math_score desc, avg_math_score desc
@@ -179,8 +178,8 @@ order by avg_math_score desc, avg_math_score desc, avg_math_score desc
 select gender,
 "parental level of education",
 avg("math score") as avg_math_score,
-avg("reading score") as avg_math_score,
-avg("writing score") as avg_math_score
+avg("reading score") as avg_reading_score,
+avg("writing score") as avg_writing_score
 from stud s 
 group by gender, "parental level of education"
 order by avg_math_score desc, avg_math_score desc, avg_math_score desc
@@ -190,8 +189,8 @@ order by avg_math_score desc, avg_math_score desc, avg_math_score desc
 
 select "test preparation course", 
 avg("math score") as avg_math_score,
-avg("reading score") as avg_math_score,
-avg("writing score") as avg_math_score
+avg("reading score") as avg_reading_score,
+avg("writing score") as avg_writing_score
 from stud s 
 group by "test preparation course"
 order by avg_math_score desc, avg_math_score desc, avg_math_score desc
@@ -202,8 +201,8 @@ order by avg_math_score desc, avg_math_score desc, avg_math_score desc
 select gender,
 "test preparation course", 
 avg("math score") as avg_math_score,
-avg("reading score") as avg_math_score,
-avg("writing score") as avg_math_score
+avg("reading score") as avg_reading_score,
+avg("writing score") as avg_writing_score
 from stud s 
 group by gender, "test preparation course"
 order by avg_math_score desc, avg_math_score desc, avg_math_score desc
@@ -213,8 +212,8 @@ order by avg_math_score desc, avg_math_score desc, avg_math_score desc
 
 select lunch, 
 avg("math score") as avg_math_score,
-avg("reading score") as avg_math_score,
-avg("writing score") as avg_math_score
+avg("reading score") as avg_reading_score,
+avg("writing score") as avg_writing_score
 from stud s 
 group by lunch
 order by avg_math_score desc, avg_math_score desc, avg_math_score desc
@@ -225,8 +224,8 @@ order by avg_math_score desc, avg_math_score desc, avg_math_score desc
 select gender,
 lunch, 
 avg("math score") as avg_math_score,
-avg("reading score") as avg_math_score,
-avg("writing score") as avg_math_score
+avg("reading score") as avg_reading_score,
+avg("writing score") as avg_writing_score
 from stud s 
 group by gender, lunch
 order by avg_math_score desc, avg_math_score desc, avg_math_score desc
