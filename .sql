@@ -99,7 +99,7 @@ group by gender, "test preparation course"
 order by num_test_prep_course desc;
 
 
-
+# quick analysis of data
 
 select "parental level of education", 
 lunch, 
