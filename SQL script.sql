@@ -16,7 +16,11 @@ from stud
 
 We see that there are 1000 rows and 8 columns each categorized:
 
-gender, race/ethnicity, parental level of edu, lunch, test prep. course, math score, reading score, writing score
+* There are 1000 students, 518 female and 482 male
+* There are two types of meal plan, standard and free/reduced
+* There are five kinds of parental level of education: master's degree, bachelor's degree, associate's degree, some high school, and high school
+* There are two types of preperation course, completed and none
+* There are three kinds of tests: math, reading, and writings
 
 # Let's see if our data is clean 
 
