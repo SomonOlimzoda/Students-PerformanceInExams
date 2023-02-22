@@ -90,6 +90,49 @@ data_prof %>% select(variable, variation_coef, range_98)
 
 # Plot data
 
+-- lunch by gender
+
+ggplot(stud)+
+  geom_boxplot(aes(x=lunch, y=`math score`,fill = gender))+
+  labs(title="Math Exam: Male vs Female")
+
+ggplot(stud)+
+  geom_boxplot(aes(x=lunch, y=`reading score`,fill = gender))+
+  labs(title="Reading Exam: Male vs Female")
+
+ggplot(stud)+
+  geom_boxplot(aes(x=lunch, y=`writing score`,fill = gender))+
+  labs(title="Writing Exam: Male vs Female")
+
+-- test preparation course by gender
+
+ggplot(stud)+
+  geom_boxplot(aes(x=`test preparation course`, y=`math score`,fill = gender))+
+  labs(title="Math Exam: Male vs Female")
+
+ggplot(stud)+
+  geom_boxplot(aes(x=`test preparation course`, y=`reading score`,fill = gender))+
+  labs(title="Reading Exam: Male vs Female")
+
+ggplot(stud)+
+  geom_boxplot(aes(x=`test preparation course`, y=`writing score`,fill = gender))+
+  labs(title="Writing Exam: Male vs Female")
+
+-- parental level of education by gender
+
+ggplot(stud)+
+  geom_boxplot(aes(x=`parental level of education`, y=`math score`,fill = gender))+
+  labs(title="Math Exam: Male vs Female")
+
+ggplot(stud)+
+  geom_boxplot(aes(x=`parental level of education`, y=`reading score`,fill = gender))+
+  labs(title="Reading Exam: Male vs Female")
+
+ggplot(stud)+
+  geom_boxplot(aes(x=`parental level of education`, y=`writing score`,fill = gender))+
+  labs(title="Writing Exam: Male vs Female")
+
+
 ggplot(stud)+
   geom_col(aes(x=`test preparation course`, y=`math score`, group=stud$gender, fill = gender))+
   facet_wrap(~stud$`race/ethnicity`, ncol=3)+
