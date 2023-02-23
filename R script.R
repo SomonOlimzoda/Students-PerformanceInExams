@@ -108,29 +108,29 @@ ggplot(stud)+
 
 ggplot(stud)+
   geom_boxplot(aes(x=`test preparation course`, y=`math score`,fill = gender))+
-  labs(title="Math Exam: Male vs Female")
+  labs(title="Math Exam: Test preparation course")
 
 ggplot(stud)+
   geom_boxplot(aes(x=`test preparation course`, y=`reading score`,fill = gender))+
-  labs(title="Reading Exam: Male vs Female")
+  labs(title="Reading Exam: Test preparation course")
 
 ggplot(stud)+
   geom_boxplot(aes(x=`test preparation course`, y=`writing score`,fill = gender))+
-  labs(title="Writing Exam: Male vs Female")
+  labs(title="Writing Exam: Test preparation course")
 
 -- parental level of education by gender
 
 ggplot(stud)+
   geom_boxplot(aes(x=`parental level of education`, y=`math score`,fill = gender))+
-  labs(title="Math Exam: Male vs Female")
+  labs(title="Math Exam: Parental level of education")
 
 ggplot(stud)+
   geom_boxplot(aes(x=`parental level of education`, y=`reading score`,fill = gender))+
-  labs(title="Reading Exam: Male vs Female")
+  labs(title="Reading Exam: Parental level of education")
 
 ggplot(stud)+
   geom_boxplot(aes(x=`parental level of education`, y=`writing score`,fill = gender))+
-  labs(title="Writing Exam: Male vs Female")
+  labs(title="Writing Exam: Parental level of education")
 
 
 ggplot(stud)+
