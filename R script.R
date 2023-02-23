@@ -136,19 +136,31 @@ ggplot(stud)+
 ggplot(stud)+
   geom_col(aes(x=`test preparation course`, y=`math score`, group=stud$gender, fill = gender))+
   facet_wrap(~stud$`race/ethnicity`, ncol=3)+
-  labs(title="math test score by gender")
+  labs(title="math test score by test preparation course")
 
 ggplot(stud)+
   geom_col(aes(x=`test preparation course`, y=`reading score`, group=stud$gender, fill = gender))+
   facet_wrap(~stud$`race/ethnicity`, ncol=3)+
-  labs(title="reading test score by gender")
+  labs(title="reading test score by test preparation course")
 
 ggplot(stud)+
   geom_col(aes(x=`test preparation course`, y=`writing score`, group=stud$gender, fill = gender))+
   facet_wrap(~stud$`race/ethnicity`, ncol=3)+
-  labs(title="writing test score by gender")
+  labs(title="writing test score by test preparation course")
 
 ggplot(stud)+
   geom_col(aes(x=`lunch`, y=`math score`, group=stud$gender, fill = gender))+
   facet_wrap(~stud$`race/ethnicity`, ncol=6)+
-  labs(title="writing test score by gender")
+  labs(title="math test score by meal plan")
+
+ggplot(stud)+
+  geom_col(aes(x=`lunch`, y=`reading score`, group=stud$gender, fill = gender))+
+  facet_wrap(~stud$`race/ethnicity`, ncol=6)+
+  labs(title="reading test score by  meal plan")
+
+ggplot(stud)+
+  geom_col(aes(x=`lunch`, y=`math score`, group=stud$gender, fill = gender))+
+  facet_wrap(~stud$`race/ethnicity`, ncol=6)+
+  labs(title="writing test score by  meal plan")
+
+
