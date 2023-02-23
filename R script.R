@@ -38,13 +38,9 @@ dim(stud)
 
 is.null(stud)
 
+# Step 3. Analysis
+
 summary(stud)
-
-sum(is.na(stud))
-
-colSums(is.na(stud))
-
-all <- na.omit(stud)
 
 skimr::skim_without_charts(stud)
 
@@ -163,4 +159,27 @@ ggplot(stud)+
   facet_wrap(~stud$`race/ethnicity`, ncol=6)+
   labs(title="writing test score by  meal plan")
 
+# Let's find a correlation among each other.
 
+# A correlation coefficient of 0.8 suggests a link between math vs reading score available that is reasonably strong. 
+# The higher the math score the higher the writing score, although other factors may also impact such increases. 
+# The same correlation coefficient of 0.8 for math vs writing score. 
+# However, the correlation coefficient of 1 is for writing vs reading score which means a more strong link between them.
+
+ggplot(data = stud, mapping = aes(x= stud$`math score`, y= stud$`writing score`))+
+  geom_jitter(alpha=0.5)+geom_rug(position = "jitter", size=.08)+
+  geom_smooth(linewidth=0.7)+
+  labs(title = "math vs writing", x="math score", y="Writing Score")+
+  theme_minimal()
+
+ggplot(data = stud, mapping = aes(x= stud$`math score`, y= stud$`reading score` ))+
+  geom_jitter(alpha=0.5)+geom_rug(position = "jitter", size=.08)+
+  geom_smooth(linewidth=0.7)+
+  labs(title = "math vs reading", x="math score", y="Reading Score")+
+  theme_minimal()
+
+ggplot(data = stud, mapping = aes(x= stud$`writing score`, y= stud$`reading score` ))+
+  geom_jitter(alpha=0.5)+geom_rug(position = "jitter", size=.08)+
+  geom_smooth(linewidth=0.7)+
+  labs(title = "writing vs reading", x="writing score", y="Reading Score")+
+  theme_minimal()
