@@ -18,8 +18,6 @@ setwd("C:/Users/Administrator/Documents/StudentsPerformance.csv")
 
 stud <- read_csv("C:/Users/Administrator/Documents/StudentsPerformance.csv")
 
-rm(all)
-
 head(stud)
 
 glimpse(stud)
