@@ -148,4 +148,7 @@ ggplot(stud)+
   facet_wrap(~stud$`race/ethnicity`, ncol=3)+
   labs(title="writing test score by gender")
 
-
+ggplot(stud)+
+  geom_col(aes(x=`lunch`, y=`math score`, group=stud$gender, fill = gender))+
+  facet_wrap(~stud$`race/ethnicity`, ncol=6)+
+  labs(title="writing test score by gender")
